@@ -18,13 +18,6 @@ $(document).ready(function(){
             }, 2500)
        
         
-        // checkmark = setTimeout($(this).append(" ").append('&#10003;'),1000);
-        // clearTimeout(checkmark)($(this).remove('&#10003;'));
-    //    function showCheckmark() {$(this).append("  ").append('&#10003;')};
-    //    setTimeout(function() {
-    //     ($(this).remove("  ").remove('&#10003;'));
-    //    }, 1000)
-        //sends to local storage
         localStorage.setItem(time, text);
        
     });
