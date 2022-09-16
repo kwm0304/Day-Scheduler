@@ -1,4 +1,3 @@
-var checkmarkEl = document.getElementById("show-saved");
 //Links the document 
 $(document).ready(function(){
     var currentDate = moment();
@@ -12,14 +11,22 @@ $(document).ready(function(){
         var time = $(this)
             .parent()
             .attr('id');
-
+           
+            $(this).addClass("fas fa-thumbs-up")
+            setTimeout(function() {
+                $('.saveBtn').removeClass("fas fa-thumbs-up");
+            }, 2500)
+       
         
         // checkmark = setTimeout($(this).append(" ").append('&#10003;'),1000);
         // clearTimeout(checkmark)($(this).remove('&#10003;'));
-       ($(this).append("").append('&#10003;'));
-       setTimeout((checkmarkEl.remove('&#10003;')), 1000);
+    //    function showCheckmark() {$(this).append("  ").append('&#10003;')};
+    //    setTimeout(function() {
+    //     ($(this).remove("  ").remove('&#10003;'));
+    //    }, 1000)
         //sends to local storage
         localStorage.setItem(time, text);
+       
     });
     
     function updateTime() {
@@ -61,4 +68,5 @@ $(document).ready(function(){
        $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
     updateTime();
+    
 });

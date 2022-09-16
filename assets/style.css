@@ -70,3 +70,15 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
+
+  .hidden {
+    display: none;
+  }
+  
+  .checkmark {
+    background-image: url(/image.png);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+
+  }
